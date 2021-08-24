@@ -18,7 +18,7 @@ cp .env.example .env
 
 Atualizar as variáveis de ambiente do arquivo .env
 ```dosini
-APP_NAME=LaravelMicroserviceEmail
+APP_NAME="Laravel Microservice Email"
 APP_URL=http://localhost:8005
 
 CACHE_DRIVER=redis
