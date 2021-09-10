@@ -9,8 +9,8 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-use App\Mail\Api\V1\Company\Created\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\Api\V1\Company\Created\WelcomeMail;
 
 class CompanyCreatedJob implements ShouldQueue
 {

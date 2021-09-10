@@ -12,7 +12,7 @@ Route::get( '/', function () {
 
 Route::get( '/test', function () {
 
-    CompanyCreatedJob::dispatch( 'Test@ezequieldhonatan.com.br' );
+    CompanyCreatedJob::dispatch( 'Test@ezequieldhonatan.com.br' )->onQueue( 'queue_email' );
 
     return response()->json( [ 'message' => 'success' ] );
 
