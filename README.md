@@ -1,6 +1,6 @@
 # Laravel Microservices com RabbitMQ - Micro E-mail
 
-Vmos criar um microservice para centralizar a comunicação da nossa aplicação, trabalhando com Message Broker RabbitMQ.
+Vamos criar um microservice para centralizar a comunicação da nossa aplicação, trabalhando com Message Broker RabbitMQ.
 
 ## Requisitos
 
