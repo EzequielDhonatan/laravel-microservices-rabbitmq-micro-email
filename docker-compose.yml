@@ -16,7 +16,7 @@ services:
             - ./:/var/www
         depends_on:
             - redis_micro_mail
-            - queue
+            - queue_micro_mail
         networks:
             - micromail
 
@@ -33,7 +33,7 @@ services:
             - micromail
 
     # Queue
-    queue:
+    queue_micro_mail:
         build:
             args:
                 user: ezequieldhonatan
