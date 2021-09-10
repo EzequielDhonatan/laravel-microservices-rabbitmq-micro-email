@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs\Api\V1\Company\Created;
+namespace App\Jobs\Api\V1\Created\Company;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -10,7 +10,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
 use Illuminate\Support\Facades\Mail;
-use App\Mail\Api\V1\Company\Created\WelcomeMail;
+use App\Mail\Api\V1\Created\Company\WelcomeMail;
 
 class CompanyCreatedJob implements ShouldQueue
 {
@@ -35,8 +35,7 @@ class CompanyCreatedJob implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to( $this->email )
-                            ->send( new WelcomeMail() );
+        Mail::to( $this->email )->send( new WelcomeMail() );
     }
 
 } // CompanyCreatedJob

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Jobs\Api\V1\Company\Created\CompanyCreatedJob;
+use App\Jobs\Api\V1\Created\Company\CompanyCreatedJob;
 
 Route::get( '/', function () {
 
@@ -12,7 +12,7 @@ Route::get( '/', function () {
 
 Route::get( '/test', function () {
 
-    CompanyCreatedJob::dispatch( 'Test@ezequieldhonatan.com.br' )->onQueue( 'queue_email' );
+    CompanyCreatedJob::dispatch( 'Devops@ezequieldhonatan.com.br' )->onQueue( 'queue_email' );
 
     return response()->json( [ 'message' => 'success' ] );
 
