@@ -16,6 +16,8 @@ class CompanyCreatedJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    protected $email;
+
     /**
      * Create a new job instance.
      *
@@ -33,7 +35,8 @@ class CompanyCreatedJob implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to( $this->email )->send( new WelcomeMail() );
+        Mail::to( $this->email )
+                            ->send( new WelcomeMail() );
     }
 
 } // CompanyCreatedJob
