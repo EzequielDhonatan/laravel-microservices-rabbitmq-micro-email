@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
     # Imagem
-    micro_email:
+    laravel_microservices_rabbitmq_micro_email:
         build:
             args:
                 user: ezequieldhonatan
