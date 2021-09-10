@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
     # Imagem
-    micro_mail:
+    micro_email:
         build:
             args:
                 user: ezequieldhonatan
@@ -15,10 +15,10 @@ services:
         volumes:
             - ./:/var/www
         depends_on:
-            - redis_micro_mail
-            - queue_micro_mail
+            - redis_micro_email
+            - queue
         networks:
-            - micromail
+            - microemail
 
     # Nginx
     nginx:
@@ -30,10 +30,10 @@ services:
             - ./:/var/www
             - ./docker/nginx/:/etc/nginx/conf.d/
         networks:
-            - micromail
+            - microemail
 
     # Queue
-    queue_micro_mail:
+    queue:
         build:
             args:
                 user: ezequieldhonatan
@@ -45,14 +45,14 @@ services:
         volumes:
             - ./:/var/www
         networks:
-            - micromail
+            - microemail
 
     # Redis
-    redis_micro_mail:
+    redis_micro_email:
         image: redis:latest
         networks:
-            - micromail
+            - microemail
 
 networks:
-    micromail:
+    microemail:
         driver: bridge
