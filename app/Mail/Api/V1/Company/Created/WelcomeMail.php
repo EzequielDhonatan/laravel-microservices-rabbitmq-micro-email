@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail\Company\Created;
+namespace App\Mail\Api\V1\Company\Created;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -28,7 +28,7 @@ class WelcomeMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown( 'mails.company.created.welcomeMail' );
+        return $this->markdown( 'mail.api.v1.company.created.welcome' );
     }
 
 } // WelcomeMail

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Jobs\Company\Created\WelcomeJob;
+use App\Jobs\Api\V1\Company\Created\CompanyCreatedJob;
 
 Route::get( '/', function () {
 
@@ -12,7 +12,7 @@ Route::get( '/', function () {
 
 Route::get( '/test', function () {
 
-    WelcomeJob::dispatch( 'Test@test.com' );
+    CompanyCreatedJob::dispatch( 'Test@ezequieldhonatan.com.br' );
 
     return response()->json( [ 'message' => 'success' ] );
 
